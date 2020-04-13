@@ -3,8 +3,17 @@ from django.db import models
 # Create your models here.
 
 
+class Journalist(models.Model):
+    name = models.CharField(max_length=60)
+    last_name = models.CharField(max_length=60)
+    bio = models.TextField(blank=True)
+
+    def __str__(self):
+        return f"{self.id}- {self.name} {self.last_name}"
+
+
 class Article(models.Model):
-    author = models.CharField(max_length=50)
+    author = models.ForeignKey(Journalist, on_delete=models.CASCADE, related_name="articles")
     title = models.CharField(max_length=120)
     description = models.CharField(max_length=200)
     body = models.TextField()
