@@ -6,9 +6,19 @@
     <title>Question Time</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
+ <style>
+            html, body,#app{
+            height: 100% !important;
+            font-family: 'PT Sans', sans-serif !important;
+            background-color: #f7f7f7 !important;
+        }
+        </style>
+    {% block style %}
+
+    {% endblock %}
 </head>
 <body>
-
+{% block content %}
+{% endblock %}
 </body>
 </html>

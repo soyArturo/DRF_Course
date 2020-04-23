@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% block style %}
+    <style>
+        .auth-box{
+            border-radius: 10px;
+            padding: 50px;
+            border-color: #1B5299;
+            border-style: solid;
+        }
+        .login-form-container{
+            width: 300px;
+            margin: auto;
+        }
+        .registration-form-container{
+            width: 400px;
+            margin: auto;
+        }
+        .outer-area{
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+        .title{
+            font-weight: bold;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<div class="outer-area">
+    <div class="auth-box text-center">
+        {% block auth %}
+
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
